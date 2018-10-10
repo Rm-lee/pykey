@@ -1,3 +1,4 @@
+
 This script will configure a second keyboards keys to either write a block of text on a keypress or execute a python command on key press. All keys actions are defined by you in .pykey.conf file created on first launch.
 
 
@@ -31,7 +32,7 @@ This script will configure a second keyboards keys to either write a block of te
 	by  periods until the the first 7 characters are filled if you want to write a block of text. If
     
 	you want a command to be executed CAPITALIZE key to be remapped followed 
-	by periods until the first 6 characters are filled 7th character will be a capital C, then immediatly then immediately       followed by the python command to be executed.   
+	by periods until the first 6 characters are filled 7th character will be a capital C, then immediatly then                   immediately followed by the python command to be executed.   
   
 	The end of text or command is terminated by two carrots ^^ 
 	format of .pykey.conf should look as follows
@@ -55,7 +56,8 @@ This script will configure a second keyboards keys to either write a block of te
   
   
   Features to come..
-    -adding hotkeys as an action so a single key can be used to initiate keypress combinations..
+  
+   -adding hotkeys as an action so a single key can be used to initiate keypress combinations..
     
 ![screenshot from 2018-10-10 14-58-23](https://user-images.githubusercontent.com/43976537/46759473-80f0da00-cc9d-11e8-94d9-5cc365ac651f.png)
 
