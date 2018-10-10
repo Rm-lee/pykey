@@ -39,7 +39,8 @@ This script will configure a second keyboards keys to either write a block of te
   
 	A......will write this text when you press the a key^^    
 	B.....Cprint("this just ran a command when you pressed the b key")^^ 
-  Pressing the 'A' key will write text, Pressing the 'B' key will execute the print command.
+	
+	Pressing the 'A' key will write text, Pressing the 'B' key will execute the print command.  
   
 
 	White space inside of text block is also preserved so if you write 
