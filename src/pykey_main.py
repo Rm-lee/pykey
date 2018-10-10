@@ -100,7 +100,7 @@ else:
         for i in neededPacakages:
             install(i)
  
-    import keyboard
+    
     import autopy
     from evdev import InputDevice, categorize, ecodes
    
