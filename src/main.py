@@ -15,6 +15,27 @@ gi.require_version('Notify', '0.7')
 from gi.repository import Notify
 
 
+import sys
+import os
+import subprocess
+import grp, pwd
+import getpass
+ 
+#find the group that /dev/input events belong too
+gid = os.stat('/dev/input/event0').st_gid
+neededGroup = grp.getgrgid(gid)[0]
+ready = ""
+ 
+#find current user
+user = getpass.getuser()
+ 
+#list groups user belongs too
+groups = [g.gr_name for g in grp.getgrall() if user in g.gr_mem]
+gid = pwd.getpwnam(user).pw_gid
+groups.append(grp.getgrgid(gid).gr_name)
+ 
+
+
 APPINDICATOR_ID = "top_bar_icon"
 
 
@@ -26,6 +47,13 @@ def main():
 	indicator.set_status(AppIndicator3.IndicatorStatus.ACTIVE)
 	indicator.set_menu(menu_build())
 	Notify.init(APPINDICATOR_ID)
+
+	#if user does not belong to the needed group warn user then exit program
+	if neededGroup in groups:
+		systemNotification(main)
+		exit()
+		
+ 
 
 	Gtk.main()
 
@@ -68,10 +96,9 @@ def systemNotification(source):
 	
 
 	
-	name = "A System Notification"
-	
-	Notify.Notification.new("This is ", 
-							name,
+	message = "Your user is not in the {} group! Script will fail if you are not in this group!\nAdd {} to input group to continue. \n\nExiting...".format(neededGroup, user)
+	Notify.Notification.new("WARNING!!  ", 
+							message,
 							None).show()
 def quit(source):
 	Notify.uninit()
