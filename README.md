@@ -1,0 +1,1 @@
+This script will configure a second keyboards keys to either write a block of text on a keypress or execute a python command on key press. All keys actions are defined by you in .pykey.conf file created on first launch.
