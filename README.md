@@ -57,3 +57,5 @@ This script will configure a second keyboards keys to either write a block of te
   Features to come..
     -adding hotkeys as an action so a single key can be used to initiate keypress combinations..
     
+![screenshot from 2018-10-10 14-58-23](https://user-images.githubusercontent.com/43976537/46759473-80f0da00-cc9d-11e8-94d9-5cc365ac651f.png)
+
