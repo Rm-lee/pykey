@@ -3,7 +3,7 @@ This script will configure a second keyboards keys to either write a block of te
 All changes are not permanent. Only while script is running will the second keyboard be remapped
 defaults are restored on exit.
 
- Usage:  ./pykey_main.py or ./pykey_main.py -h for help text
+ Usage:  ```./pykey_main.py``` or ```./pykey_main.py -h``` for help text
 
 This program will remap key presses to execute commands or write 
 blocks of text specified by you in the .pykey.conf config file 
