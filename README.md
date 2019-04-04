@@ -34,9 +34,10 @@ Config should be laid out as follows CAPITALIZE key to be remapped followed
 by  periods until the the first 7 characters are filled if you want to write a block of text. If
   
 you want a command to be executed CAPITALIZE key to be remapped followed 
-by periods until the first 6 characters are filled 7th character will be a capital C, then immediatly then                   immediately followed by the python command to be executed.   
+by periods until the first 6 characters are filled 7th character will be a capital C (indicating a command) then 
+immediately followed by the python command to be executed.   
 
-The end of text or command is terminated by two carrots ^^ 
+The end of text or command is terminated by two carets ^^ 
 format of .pykey.conf should look as follows
 
 
@@ -54,7 +55,7 @@ for (i=1; i<sumnum; i++) {
 
 }^^
   
-the block is written just the way you write it preserving the newlines inside
+this in the conf file the block is written just the way you write it preserving the newlines inside
 
   
   
